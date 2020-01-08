@@ -1,11 +1,15 @@
 namespace Store.Domain.Entities
 {    
-    public string Name { get; private set; }
-    public string Email { get; private set; }
-
-    public class Customer(string name, string email)
+    public class Customer : Entity
     {
-        Name = name;
-        Email = email;
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+
+        public Customer(string name, string email)
+        {
+            Name = name;
+            Email = email;
+        }
+
     }
 }
